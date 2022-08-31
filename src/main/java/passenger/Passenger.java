@@ -1,4 +1,4 @@
-package Passenger;
+package passenger;
 
 public class Passenger {
 
