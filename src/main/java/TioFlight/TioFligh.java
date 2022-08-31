@@ -14,9 +14,13 @@
 //            int Passenger = input.nextInt();
 //            if ( Passenger == 1 )
 //            {
-//                bookSeats();
-//            }
-//        }
+//                bookIT1();
+//             }   else {
+//
+//                bookFR2();
+//          } else {
+//            bookGE3()
+//              } }
 //            // Check for available seats
 //            public void Booking(){
 //                for (int cnt = 1; cnt <= 10; cnt++) {
