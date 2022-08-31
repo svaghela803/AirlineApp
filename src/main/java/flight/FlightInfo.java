@@ -6,30 +6,29 @@ public class FlightInfo {
     
     public void bookFlight(Flight.Flight flight, Passenger passenger) {
         for (int i = 0; i<flight.getMaxCapacity(); i++){
+            Passenger passengers = null;
             if (flight.getPassengersOnFlight()[i]==null || (flight.getPassengersOnFlight()[i].equals(passengers))==false){
                 System.out.println("Booking completed! These are the details: Flight number: " +
-                        flight.getFlightNumber() 
+                        flight.getFlightNumber()
                         + ", Destination: " + flight.getDestination());
                 flight.getPassengersOnFlight()[i] = passenger;
                 break;
             }
         }
     }
-
-    public void cancelFlight(Flight flight, Customer customer) {
+    public void cancelFlight(Flight.Flight flight, Passenger passenger) {
         for (int i = 0; i<flight.getMaxCapacity(); i++){
-            if (customer.equals(flight.getCustomersOnFlight()[i])){
+            if (passenger.equals(flight.getPassengersOnFlight()[i])){
                 System.out.println("Your flight has been successfully cancelled! These are the details:" +
-                        " Flight number: " + flight.getFlightNumber() + ", Departure time: " +
-                        flight.getDepartureTime() + ", Destination: " + flight.getDestination());
-                flight.getCustomersOnFlight()[i] = null;
+                        " Flight number: " + flight.getFlightNumber() +
+                        ", Destination: " + flight.getDestination());
+                flight.getPassengersOnFlight()[i] = null;
                 break;
             }
         }
     }
-
-    public int countPassengers(Flight flight){
-        Customer[] passengers = flight.getCustomersOnFlight();
+    public int countPassengers(Flight.Flight){
+        Passenger[] passengers = flight.getPassengersOnFlight();
         int numPassengers = 0;
         for (int i = 0; i < passengers.length; i++){
             if (passengers[i] != null){

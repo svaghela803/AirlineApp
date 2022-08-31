@@ -5,13 +5,13 @@ import java.util.Objects;
 
 public class Airport {
 
-        private String BNTAirlines;
+        private String airportName;
         private int maxFlights;
         private Flight.Flight[] flightsArray;
 
 
 public Airport(String airportName, int maxFlights) {
-            this.BNTAirlines = airportName;
+            this.airportName = airportName;
             this.maxFlights = maxFlights;
             this.flightsArray = new Flight.Flight[maxFlights];
         }
@@ -35,7 +35,7 @@ public Airport(String airportName, int maxFlights) {
               @Override
               public String toString() {
                   return "Airport{" +
-                          "airportName='" + BNTAirlines + '\'' +
+                          "airportName='" + airportName + '\'' +
                           ", maxFlights=" + maxFlights +
                           ", flightsArray=" + Arrays.toString(flightsArray) +
                           '}';
@@ -46,13 +46,13 @@ public Airport(String airportName, int maxFlights) {
                      if (this == o) return true;
                      if (o == null || getClass() != o.getClass()) return false;
                      Airport airport = (Airport) o;
-                     return maxFlights == airport.maxFlights && Objects.equals(BNTAirlines, airport.BNTAirlines) &&
+                     return maxFlights == airport.maxFlights && Objects.equals(airportName, airport.airportName) &&
                              Arrays.equals(flightsArray, airport.flightsArray);
                  }
 
                  @Override
                  public int hashCode() {
-                     int result = Objects.hash(BNTAirlines, maxFlights);
+                     int result = Objects.hash(airportName, maxFlights);
                      result = 31 * result + Arrays.hashCode(flightsArray);
                      return result;
                  }

@@ -4,16 +4,15 @@ public class Passenger {
 
 
     private String name;
-    private int contactNo;
-    private int iD;
+    private String phoneNumber;
+    private String passportNumber;
 
-    public Passenger(String name, int contactNo, int iD) {
-        this.name = name;
-        this.contactNo = contactNo;
-        this.iD = iD;
+
+
+    public Passenger(String name, String phoneNumber, String passportNumber) {
     }
 
-//    getters and setters
+    //    getters and setters
     public String getName() {
         return name;
     }
@@ -22,23 +21,23 @@ public class Passenger {
         this.name = name;
     }
 
-    public int getContactNo() {
-        return contactNo;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setContactNo(int contactNo) {
-        this.contactNo = contactNo;
-
-        public int getiD() {
-            return iD;
-        }
-
-        public void setiD(int iD) {
-            this.iD = iD;
-
-
+    public void setPhoneNumber(String PhoneNumber) {
+        this.phoneNumber = phoneNumber;
 
 
         }
+
+    public String getPassportNumber() {
+        return passportNumber;
+    }
+
+    public void setPassportNumber (String passportNumber) {
+        this.passportNumber = passportNumber;
     }
 }
+
+

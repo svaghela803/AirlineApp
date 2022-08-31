@@ -1,4 +1,4 @@
-package Flight;
+package flight;
 
 //We use an enum here because our constraints are fixed. i.e our locatios will never change
 // They are predefined values to represent the textual date (our destinations)

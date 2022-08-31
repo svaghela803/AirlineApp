@@ -1,7 +1,7 @@
-package Flight;.Passenger
+package Flight;
 
+import flight.Destination;
 import passenger.Passenger;
-import passengreimport passenger.Passenger;
 
 public class Flight {
 
